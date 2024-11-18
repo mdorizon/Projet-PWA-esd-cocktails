@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: 80,
     flexDirection: 'column',
-    backgroundColor: "#F5FCFF"
+    backgroundColor: "#121212"
   },
   container: {
     flex: 1,
@@ -60,7 +60,8 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     textAlign: "center",
-    margin: 10
+    margin: 10,
+    color: "#fff"
   },
   secondTitle: {
     fontSize: 18,

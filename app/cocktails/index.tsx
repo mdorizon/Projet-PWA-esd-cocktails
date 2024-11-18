@@ -255,6 +255,9 @@ export default function Counter() {
     }
   ];
   
+  const handleNavigateToCocktailSingle = (id: number) => {
+    router.push(`cocktails/${id}`)
+  }
 
   return (
     <View style={styles.page}>
@@ -265,7 +268,7 @@ export default function Counter() {
           renderItem={({item}) =>
             <View>
               <Text style={styles.secondTitle}>{item.name}</Text>
-              <Button title={"Voir le cocktail"} onPress={() => router.push(`cocktails/${item.id}`)} />
+              <Button title={"Voir le cocktail"} onPress={() => handleNavigateToCocktailSingle(item.id)} />
             </View>
           }
         />

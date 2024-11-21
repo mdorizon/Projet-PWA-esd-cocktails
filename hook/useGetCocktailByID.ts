@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
-const useGetCocktailsByID = (id: Number) => {
-  const [cocktails, setcocktails] = useState([]);
+const useGetCocktailByID = (id: Number) => {
+  const [cocktail, setcocktail] = useState(null);
 
   useEffect(() => {
     (async () => {
@@ -9,11 +9,11 @@ const useGetCocktailsByID = (id: Number) => {
       const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`);
       const cocktail = await response.json()
 
-      setcocktails(cocktail.drinks[0])
+      setcocktail(cocktail.drinks[0])
     })()
   }, [])
 
-  return cocktails
+  return cocktail
 }
 
-export default useGetCocktailsByID
+export default useGetCocktailByID
